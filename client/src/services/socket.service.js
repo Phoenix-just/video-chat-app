@@ -8,7 +8,7 @@ class SocketService {
     }
 
     connect() {
-        this.socket = io('https://video-chat-app-3y1a.onrender.com', {
+        this.socket = io(process.env.SERVER_URL, {
             transports: ['websocket'],
             autoConnect: true
         });

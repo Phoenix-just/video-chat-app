@@ -200,7 +200,7 @@ function App() {
         ) : (
           <div className="video-container">
             <div className="video-wrapper">
-              <video ref={localVideoRef} playsInline></video>
+              <video ref={localVideoRef} playsInline muted></video>
               <button className="video-toggle-overlay" onClick={handleVideoToggle}>
                 {isVideoEnabled ? (
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
