@@ -142,7 +142,9 @@ function App() {
   const handleRoomVacated = () => {
     console.log('Room vacated');
     webRTCService.close();
-    remoteVideoRef.current.srcObject = null;
+    if (remoteVideoRef.current) {
+      remoteVideoRef.current.srcObject = null;
+    }
     setRoomFilled(false);
     handleStartVideoChat();
   }
