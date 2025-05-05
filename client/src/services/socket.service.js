@@ -8,6 +8,7 @@ class SocketService {
     }
 
     connect() {
+        console.log(process.env.SERVER_URL);
         this.socket = io(process.env.SERVER_URL, {
             transports: ['websocket'],
             autoConnect: true
