@@ -8,8 +8,9 @@ class SocketService {
     }
 
     connect() {
-        console.log(process.env.SERVER_URL);
-        this.socket = io(process.env.SERVER_URL, {
+        console.log('Environment variables:', process.env);
+        console.log('Server URL:', process.env.REACT_APP_SERVER_URL);
+        this.socket = io(process.env.REACT_APP_SERVER_URL, {
             transports: ['websocket'],
             autoConnect: true
         });
