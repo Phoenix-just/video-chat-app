@@ -4,8 +4,18 @@ class WebRTCService {
         this.configuration = {
             iceServers: [
                 { urls: 'stun:stun.l.google.com:19302' },
-                // Add TURN servers here if needed for NAT traversal
-            ]
+                {
+                    urls: 'turn:numb.viagenie.ca',
+                    credential: 'muazkh',
+                    username: 'webrtc@live.com'
+                },
+                {
+                    urls: 'turn:turn.anyfirewall.com:443?transport=tcp',
+                    credential: 'webrtc',
+                    username: 'webrtc'
+                }
+            ],
+            iceCandidatePoolSize: 10
         };
 
         // Create RTCPeerConnection instance
