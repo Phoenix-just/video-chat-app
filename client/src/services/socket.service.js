@@ -12,6 +12,10 @@ class SocketService {
         console.log('Server URL:', process.env.REACT_APP_SERVER_URL);
         this.socket = io(process.env.REACT_APP_SERVER_URL, {
             transports: ['websocket'],
+            headers: {
+                'skip_zrok_interstitial': '1',
+                'ngrok-skip-browser-warning': '1'
+            },
             autoConnect: true
         });
 
