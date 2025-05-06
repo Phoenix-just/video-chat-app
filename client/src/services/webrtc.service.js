@@ -2,29 +2,54 @@ class WebRTCService {
     constructor() {
         // Configuration for STUN/TURN servers
         this.configuration = {
-            iceServers: [
-                { urls: 'stun:stun.l.google.com:19302' },
-                { urls: "stun:stun.l.google.com:19302" },
-                { urls: "stun:stun.l.google.com:5349" },
-                { urls: "stun:stun1.l.google.com:3478" },
-                { urls: "stun:stun1.l.google.com:5349" },
-                { urls: "stun:stun2.l.google.com:19302" },
-                { urls: "stun:stun2.l.google.com:5349" },
-                { urls: "stun:stun3.l.google.com:3478" },
-                { urls: "stun:stun3.l.google.com:5349" },
-                { urls: "stun:stun4.l.google.com:19302" },
-                { urls: "stun:stun4.l.google.com:5349" },
+            iceServers:[
                 {
-                    urls: 'turn:numb.viagenie.ca',
-                    credential: 'muazkh',
-                    username: 'webrtc@live.com'
+                  urls: "stun:stun.relay.metered.ca:80",
                 },
                 {
-                    urls: 'turn:turn.anyfirewall.com:443?transport=tcp',
-                    credential: 'webrtc',
-                    username: 'webrtc'
-                }
+                  urls: "turn:global.relay.metered.ca:80",
+                  username: "00131c62c8d3ae389777ce80",
+                  credential: "qlcDIB47LytN3u7O",
+                },
+                {
+                  urls: "turn:global.relay.metered.ca:80?transport=tcp",
+                  username: "00131c62c8d3ae389777ce80",
+                  credential: "qlcDIB47LytN3u7O",
+                },
+                {
+                  urls: "turn:global.relay.metered.ca:443",
+                  username: "00131c62c8d3ae389777ce80",
+                  credential: "qlcDIB47LytN3u7O",
+                },
+                {
+                  urls: "turns:global.relay.metered.ca:443?transport=tcp",
+                  username: "00131c62c8d3ae389777ce80",
+                  credential: "qlcDIB47LytN3u7O",
+                },
             ],
+            // iceServers: [
+            //     { urls: 'stun:stun.l.google.com:19302' },
+            //     { urls: "stun:stun.l.google.com:19302" },
+            //     { urls: "stun:stun.l.google.com:5349" },
+            //     { urls: "stun:stun1.l.google.com:3478" },
+            //     { urls: "stun:stun1.l.google.com:5349" },
+            //     { urls: "stun:stun2.l.google.com:19302" },
+            //     { urls: "stun:stun2.l.google.com:5349" },
+            //     { urls: "stun:stun3.l.google.com:3478" },
+            //     { urls: "stun:stun3.l.google.com:5349" },
+            //     { urls: "stun:stun4.l.google.com:19302" },
+            //     { urls: "stun:stun4.l.google.com:5349" },
+            //     {
+            //         urls: 'turn:numb.viagenie.ca',
+            //         credential: 'muazkh',
+            //         username: 'webrtc@live.com'
+            //     },
+            //     {
+            //         urls: 'turn:turn.anyfirewall.com:443?transport=tcp',
+            //         credential: 'webrtc',
+            //         username: 'webrtc'
+            //     }
+            // ],
             iceCandidatePoolSize: 10
         };
 
