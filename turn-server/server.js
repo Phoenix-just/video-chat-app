@@ -1,10 +1,14 @@
 require('dotenv').config();
 const Turn = require('node-turn');
 
+const port = process.env.TURN_PORT || 3478;
+
+console.log('ENV', process.env);
+
 // Create a new TURN server instance
 const server = new Turn({
   // Set the listening port
-  listeningPort: 3478,
+  listeningPort: port,
   // Set the relay port range
   relayPorts: [49152, 65535],
   // Set the authentication credentials
@@ -19,7 +23,7 @@ const server = new Turn({
 // Start the server
 server.start();
 
-console.log('TURN server is running on port 3478');
+console.log('TURN server is running on port', port);
 console.log('Username: ', process.env.TURN_USERNAME);
 console.log('Password: ', process.env.TURN_PASSWORD);
 
