@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Turn = require('node-turn');
 
-const port = process.env.TURN_PORT || 3478;
+const port = process.env.PORT || 4387;
 
 console.log('ENV', process.env);
 
