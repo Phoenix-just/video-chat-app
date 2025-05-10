@@ -198,7 +198,7 @@ function App() {
       <div className="App">
         <h1>CONVERSO</h1>
         {!isVideoChatActive ? (
-          <button onClick={onStartVideoChat}>INITIATE CONNECTION</button>
+          <button onClick={onStartVideoChat}>Start Video Chat</button>
         ) : (
           <div className="video-container">
             <div className="video-wrapper">
@@ -218,7 +218,9 @@ function App() {
                 )}
               </button>
             </div>
-            <video ref={remoteVideoRef} playsInline></video>
+            <div className="video-wrapper">
+              <video ref={remoteVideoRef} playsInline autoPlay></video>
+            </div>
           </div>
         )}
       </div>
