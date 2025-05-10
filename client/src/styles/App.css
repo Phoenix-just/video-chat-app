@@ -60,7 +60,7 @@ video {
   background: #000;
 }
 
-.video-wrapper:first-child .video-toggle-overlay {
+.video-wrapper:nth-child(2) .video-toggle-overlay {
   position: sticky;
   bottom: 1rem;
   right: 1rem;
@@ -82,7 +82,7 @@ video {
   transform: none;
 }
 
-.video-wrapper:first-child .video-toggle-overlay:hover {
+.video-wrapper:nth-child(2) .video-toggle-overlay:hover {
   background: var(--primary-color);
   color: white;
   transform: scale(1.1);

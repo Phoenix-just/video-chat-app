@@ -202,6 +202,9 @@ function App() {
         ) : (
           <div className="video-container">
             <div className="video-wrapper">
+              <video ref={remoteVideoRef} playsInline autoPlay></video>
+            </div>
+            <div className="video-wrapper">
               <video ref={localVideoRef} playsInline muted></video>
               <button className="video-toggle-overlay" onClick={handleVideoToggle}>
                 {isVideoEnabled ? (
@@ -217,9 +220,6 @@ function App() {
                   </svg>
                 )}
               </button>
-            </div>
-            <div className="video-wrapper">
-              <video ref={remoteVideoRef} playsInline autoPlay></video>
             </div>
           </div>
         )}
